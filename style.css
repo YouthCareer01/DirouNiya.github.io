@@ -68,3 +68,43 @@ footer {
 	color: #333;
 	font-size: 1.2rem;
 }
+
+/* Responsive styles */
+
+/* Small screens */
+@media (max-width: 767px) {
+  nav li {
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+  
+  nav a {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid #fff;
+  }
+  
+  section {
+    padding: 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  section ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  section li {
+    font-size: 1rem;
+  }
+  
+  footer {
+    font-size: 1rem;
+  }
+}
+

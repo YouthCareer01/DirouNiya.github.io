@@ -122,6 +122,19 @@
     form input[type="submit"]:hover {
       background-color: #555555;
     }
+
+    /* Responsieve aanpassingen voor kleinere schermen */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px; /* Voorbeeld van aanpassing: verklein de lettergrootte */
+      }
+
+      img {
+        max-width: 100%; /* Voorbeeld van aanpassing: maak afbeeldingen responsief */
+      }
+
+      /* Voeg hier andere responsieve CSS-regels toe om de website aan te passen voor kleinere schermen */
+    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -189,44 +202,28 @@
     <p>Vul het onderstaande formulier in om contact met ons op te nemen of u in te schrijven voor een training, coaching sessie of cursus:</p>
     <form action="https://formspree.io/f/xjvdnqlo" method="POST">
       <label for="name">Naam:</label>
-      <input type="text" id="name" name="name" required><br>
+      <input type="text" id="name" name="name" required>
 
       <label for="email">E-mailadres:</label>
-      <input type="email" id="email" name="email" required><br>
+      <input type="email" id="email" name="email" required>
 
       <label for="phone">Telefoonnummer:</label>
-      <input type="tel" id="phone" name="phone"><br>
+      <input type="tel" id="phone" name="phone" required>
 
       <label for="message">Bericht:</label>
-      <textarea id="message" name="message" required></textarea><br>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
-      <label for="type">Type:</label>
-      <select id="type" name="type" required>
-        <option value="training">Training</option>
-        <option value="coaching">Coaching</option>
-        <option value="cursus">Cursus</option>
-        <option value="overige">Overige</option>
-      </select>
-
-      <input type="submit" value="Verstuur">
+      <input type="submit" value="Versturen">
     </form>
   </section>
 
   <footer>
     <div class="social-icons">
-      <a href="#"><img src="facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="twitter-logo.png" alt="Twitter"></a>
-      <a href="#"><img src="instagram-logo.png" alt="Instagram"></a>
+      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
     </div>
-    <p>&copy; 2023 Dirouniya. Alle rechten voorbehouden.</p>
+    <p>© 2023 Dirouniya. Alle rechten voorbehouden.</p>
   </footer>
-
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent the default form submit behavior
-      this.submit(); // Submit the form
-      window.location.href = "bedankpagina.html"; // Redirect to the thank you page
-    });
-  </script>
 </body>
 </html>

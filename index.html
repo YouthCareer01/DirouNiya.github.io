@@ -70,6 +70,7 @@
         right: 20px;
         background-color: #333;
         width: 150px;
+        z-index: 1;
       }
 
       nav ul.show li {
@@ -226,41 +227,52 @@
     <ul>
       <li>Cursus aanmelden bij woningnet</li>
       <li>Training belastingaangifte doen</li>
-      <li>Cursus inschrijven voor huurwoningen</li>
+      <li>Cursus inschrijven gemeente</li>
       <!-- Voeg meer cursussen toe -->
     </ul>
     <a href="#contact">Neem contact op voor meer informatie of om u in te schrijven.</a>
-    <img src="fotttoooo.jpg" alt="Cursussen" class="fade-in">
+    <img src="Cursus foto .jpg" alt="Cursussen" class="fade-in">
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Vul het onderstaande formulier in om contact met ons op te nemen of u in te schrijven voor een training, coaching sessie of cursus:</p>
-    <form action="https://formspree.io/f/xjvdnqlo" method="POST">
+    <p>Neem contact met ons op voor vragen, opmerkingen of om u in te schrijven voor een van onze activiteiten.</p>
+    <form action="contact.php" method="POST">
       <label for="name">Naam:</label>
-      <input type="text" id="name" name="name" required style="text-align: center;">
+      <input type="text" id="name" name="name" placeholder="Uw naam" required>
 
-      <label for="email">E-mailadres:</label>
-      <input type="email" id="email" name="email" required style="text-align: center;">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Uw e-mailadres" required>
 
       <label for="phone">Telefoonnummer:</label>
-      <input type="tel" id="phone" name="phone" required style="text-align: center;">
+      <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
 
       <label for="message">Bericht:</label>
-      <textarea id="message" name="message" rows="4" required style="text-align: center;"></textarea>
+      <textarea id="message" name="message" placeholder="Uw bericht" required></textarea>
 
       <input type="submit" value="Versturen">
     </form>
   </section>
 
   <footer>
-     <div class="social-icons">
+    <div class="social-icons">
       <a href="#"><img src="facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="twitter-logo.png" alt="Twitter"></a>
-      <a href="#"><img src="instagram-logo.png" alt="Instagram"></a>
+      <a href="#"><img src="twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
     </div>
-    <p>&copy; 2023 Dirouniya. Alle rechten voorbehouden.</p>
+    <p>Dirou Niya &copy; 2023</p>
   </footer>
+
+  <script>
+    // JavaScript code hier (indien nodig)
+    const menuIcon = document.querySelector(".menu-icon");
+    const nav = document.querySelector("nav ul");
+
+    menuIcon.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
+
 

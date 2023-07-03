@@ -49,6 +49,14 @@
       cursor: pointer;
     }
 
+    .menu-icon span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      margin-bottom: 5px;
+    }
+
     @media screen and (max-width: 768px) {
       nav ul {
         display: none;
@@ -58,8 +66,8 @@
         display: block;
       }
 
-      .menu-icon:hover {
-        color: #ffffff;
+      .menu-icon:hover span {
+        background-color: #ffffff;
       }
 
       nav ul.show {
@@ -178,7 +186,11 @@
   <header>
     <h1>Dirou Niya</h1>
     <nav>
-      <div class="menu-icon">&#9776;</div>
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#trainingen">Trainingen</a></li>
@@ -274,5 +286,4 @@
   </script>
 </body>
 </html>
-
 

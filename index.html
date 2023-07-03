@@ -4,139 +4,172 @@
   <title>Dirou Niya</title>
   <style>
     /* CSS-styling hier */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url(pexels-pixabay-36717.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white; /* Alle tekst wit maken */
-}
-css
-Copy code
-header {
-  background-color: #333;
-  padding: 20px;
-  text-align: center;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(pexels-pixabay-36717.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white; /* Alle tekst wit maken */
+    }
 
-h1 {
-  color: #ffffff;
-}
+    header {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+    }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
+    h1 {
+      color: #ffffff;
+    }
 
-nav ul li {
-  margin-right: 10px;
-}
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: #cccccc;
-  padding: 5px;
-}
+    nav ul li {
+      margin-right: 10px;
+    }
 
-section {
-  padding: 40px;
-  text-align: center;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #cccccc;
+      padding: 5px;
+    }
 
-h2 {
-  color: ##000000;
-}
+    /* Hamburgermenu voor kleinere schermen */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
 
-img {
-  max-width: 450px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
 
-.fade-in {
-  animation: fadeIn 1s ease;
-}
+      .menu-icon {
+        display: block;
+      }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+      .menu-icon:hover {
+        color: #ffffff;
+      }
 
-footer {
-  background-color: #333333;
-  padding: 20px;
-  text-align: center;
-  color: #ffffff;
-}
+      nav ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 150px;
+      }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+      nav ul.show li {
+        margin: 10px;
+      }
+    }
 
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-}
+    section {
+      padding: 40px;
+      text-align: center;
+    }
 
-.social-icons img {
-  max-width: 30px;
-  height: auto;
-}
+    h2 {
+      color: white;
+    }
 
-/* Aanpassingen voor het contactformulier */
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
+    img {
+      max-width: 450px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #cccccc;
-  text-align: center; /* Center align the text */
-}
+    .fade-in {
+      animation: fadeIn 1s ease;
+    }
 
-form input[type="submit"] {
-  background-color: #333333;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
-form input[type="submit"]:hover {
-  background-color: #555555;
-}
+    footer {
+      background-color: #333333;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
 
-/* Responsieve aanpassingen voor kleinere schermen */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 16px; /* Voorbeeld van aanpassing: verklein de lettergrootte */
-  }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-  img {
-    max-width: 100%; /* Voorbeeld van aanpassing: maak afbeeldingen responsief */
-  }
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
 
-  /* Voeg hier andere responsieve CSS-regels toe om de website aan te passen voor kleinere schermen */
-}
+    .social-icons img {
+      max-width: 30px;
+      height: auto;
+    }
+
+    /* Aanpassingen voor het contactformulier */
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+      text-align: center; /* Center align the text */
+    }
+
+    form input[type="submit"] {
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #555555;
+    }
+
+    /* Responsieve aanpassingen voor kleinere schermen */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px; /* Voorbeeld van aanpassing: verklein de lettergrootte */
+      }
+
+      img {
+        max-width: 100%; /* Voorbeeld van aanpassing: maak afbeeldingen responsief */
+      }
+
+      /* Voeg hier andere responsieve CSS-regels toe om de website aan te passen voor kleinere schermen */
+    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -144,6 +177,7 @@ form input[type="submit"]:hover {
   <header>
     <h1>Dirou Niya</h1>
     <nav>
+      <div class="menu-icon">&#9776;</div>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#trainingen">Trainingen</a></li>
@@ -153,11 +187,13 @@ form input[type="submit"]:hover {
       </ul>
     </nav>
   </header>
+
   <section id="home">
     <h2>Welkom bij ons talentontwikkelingsprogramma!</h2>
     <p>Wij bieden verschillende workshops, trainingen en coaching sessies aan om jongeren te stimuleren in hun persoonlijke groei en ontwikkeling. Hieronder vindt u ons aanbod:</p>
     <img src="fotttttttooooooooooooooooooo.jpg" alt="Welkom" class="fade-in">
   </section>
+
   <section id="trainingen">
     <h2>Trainingen</h2>
     <p>Beschrijving van de trainingen die beschikbaar zijn.</p>
@@ -170,6 +206,7 @@ form input[type="submit"]:hover {
     <a href="#contact">Neem contact op voor meer informatie of om u in te schrijven.</a>
     <img src="foto.jpg" alt="Trainingen" class="fade-in">
   </section>
+
   <section id="coaching">
     <h2>Coaching</h2>
     <p>Onze coaches zijn beschikbaar voor individuele sessies over bijvoorbeeld mindfulness, zelfreflectie, leiderschap en time-management. Neem contact met ons op voor meer informatie.</p>
@@ -182,6 +219,7 @@ form input[type="submit"]:hover {
     <a href="#contact">Neem contact op voor meer informatie of om u in te schrijven.</a>
     <img src="coach fotot .jpg" alt="Coaching" class="fade-in">
   </section>
+
   <section id="cursussen">
     <h2>Cursussen</h2>
     <p>Beschrijving van de cursussen die beschikbaar zijn.</p>
@@ -194,26 +232,27 @@ form input[type="submit"]:hover {
     <a href="#contact">Neem contact op voor meer informatie of om u in te schrijven.</a>
     <img src="fotttoooo.jpg" alt="Cursussen" class="fade-in">
   </section>
+
   <section id="contact">
     <h2>Contact</h2>
     <p>Vul het onderstaande formulier in om contact met ons op te nemen of u in te schrijven voor een training, coaching sessie of cursus:</p>
     <form action="https://formspree.io/f/xjvdnqlo" method="POST">
       <label for="name">Naam:</label>
       <input type="text" id="name" name="name" required style="text-align: center;">
-php
-Copy code
-  <label for="email">E-mailadres:</label>
-  <input type="email" id="email" name="email" required style="text-align: center;">
 
-  <label for="phone">Telefoonnummer:</label>
-  <input type="tel" id="phone" name="phone" required style="text-align: center;">
+      <label for="email">E-mailadres:</label>
+      <input type="email" id="email" name="email" required style="text-align: center;">
 
-  <label for="message">Bericht:</label>
-  <textarea id="message" name="message" rows="4" required style="text-align: center;"></textarea>
+      <label for="phone">Telefoonnummer:</label>
+      <input type="tel" id="phone" name="phone" required style="text-align: center;">
 
-  <input type="submit" value="Versturen">
-</form>
+      <label for="message">Bericht:</label>
+      <textarea id="message" name="message" rows="4" required style="text-align: center;"></textarea>
+
+      <input type="submit" value="Versturen">
+    </form>
   </section>
+
   <footer>
      <div class="social-icons">
       <a href="#"><img src="facebook.png" alt="Facebook"></a>
@@ -224,3 +263,4 @@ Copy code
   </footer>
 </body>
 </html>
+

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Dirou Niya</title>
+  <title>Dirou Niya</title>
   <style>
     /* CSS-styling hier */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #000000;
-      color: white;
+      background-image: url(pexels-james-wheeler-417074.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white; /* Alle tekst wit maken */
     }
 
     header {
@@ -24,6 +25,67 @@
       color: #ffffff;
     }
 
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #cccccc;
+      padding: 5px;
+    }
+
+    /* Hamburgermenu voor kleinere schermen */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .menu-icon:hover span {
+        background-color: #ffffff;
+      }
+
+      nav ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 150px;
+        z-index: 1;
+      }
+
+      nav ul.show li {
+        margin: 10px;
+      }
+    }
+
     section {
       padding: 40px;
       text-align: center;
@@ -33,34 +95,24 @@
       color: white;
     }
 
-    form {
-      max-width: 500px;
+    img {
+      max-width: 450px;
+      height: auto;
+      display: block;
       margin: 0 auto;
     }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
+    .fade-in {
+      animation: fadeIn 1s ease;
     }
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #cccccc;
-    }
-
-    input[type="submit"] {
-      background-color: #333333;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #555555;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     footer {
@@ -85,7 +137,50 @@
       max-width: 30px;
       height: auto;
     }
+
+    /* Aanpassingen voor het contactformulier */
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+      text-align: center; /* Center align the text */
+    }
+
+    form input[type="submit"] {
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #555555;
+    }
+
+    /* Responsieve aanpassingen voor kleinere schermen */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px; /* Voorbeeld van aanpassing: verklein de lettergrootte */
+      }
+
+      img {
+        max-width: 100%; /* Voorbeeld van aanpassing: maak afbeeldingen responsief */
+      }
+
+      /* Voeg hier andere responsieve CSS-regels toe om de website aan te passen voor kleinere schermen */
+    }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
@@ -106,7 +201,7 @@
     </nav>
   </header>
 
-  <section id="contact">
+ <section id="contact">
     <h2>Contact</h2>
     <p>Neem contact met ons op voor vragen, opmerkingen of om u in te schrijven voor een van onze activiteiten.</p>
     <form action="contact.php" method="POST">
@@ -125,6 +220,7 @@
       <input type="submit" value="Versturen">
     </form>
   </section>
+
   <footer>
     <div class="social-icons">
       <a href="#"><img src="facebook-g158d30255_1280.png" alt="Facebook"></a>

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coaching - Dirou Niya</title>
+  <title>Dirou Niya</title>
   <style>
     /* CSS-styling hier */
     body {
@@ -27,6 +25,67 @@
       color: #ffffff;
     }
 
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #cccccc;
+      padding: 5px;
+    }
+
+    /* Hamburgermenu voor kleinere schermen */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .menu-icon:hover span {
+        background-color: #ffffff;
+      }
+
+      nav ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 150px;
+        z-index: 1;
+      }
+
+      nav ul.show li {
+        margin: 10px;
+      }
+    }
+
     section {
       padding: 40px;
       text-align: center;
@@ -36,29 +95,24 @@
       color: white;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-      margin-bottom: 20px;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
     img {
       max-width: 450px;
       height: auto;
       display: block;
       margin: 0 auto;
-      margin-top: 20px;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     footer {
@@ -83,7 +137,50 @@
       max-width: 30px;
       height: auto;
     }
+
+    /* Aanpassingen voor het contactformulier */
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+      text-align: center; /* Center align the text */
+    }
+
+    form input[type="submit"] {
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #555555;
+    }
+
+    /* Responsieve aanpassingen voor kleinere schermen */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px; /* Voorbeeld van aanpassing: verklein de lettergrootte */
+      }
+
+      img {
+        max-width: 100%; /* Voorbeeld van aanpassing: maak afbeeldingen responsief */
+      }
+
+      /* Voeg hier andere responsieve CSS-regels toe om de website aan te passen voor kleinere schermen */
+    }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
@@ -106,15 +203,15 @@
 
   <section id="coaching">
     <h2>Coaching</h2>
-    <p>Beschrijving van de coachingssessies die worden aangeboden.</p>
+    <p>Onze coaches zijn beschikbaar voor individuele sessies over bijvoorbeeld mindfulness, zelfreflectie, leiderschap en time-management. Neem contact met ons op voor meer informatie.</p>
     <ul>
-      <li>Loopbaancoaching</li>
-      <li>Persoonlijke ontwikkeling</li>
-      <li>Stressmanagement</li>
-      <!-- Voeg meer coachingssessies toe -->
+      <li>Coaching sessie 1</li>
+      <li>Coaching sessie 2</li>
+      <li>Coaching sessie 3</li>
+      <!-- Voeg meer coaching sessies toe -->
     </ul>
-    <a href="contact.html">Neem contact op voor meer informatie of om een sessie te boeken.</a>
-    <img src="foto.jpg" alt="Coaching" class="fade-in">
+    <a href="#contact">Neem contact op voor meer informatie of om u in te schrijven.</a>
+    <img src="coach fotot .jpg" alt="Coaching" class="fade-in">
   </section>
 
   <footer>
@@ -137,3 +234,5 @@
   </script>
 </body>
 </html>
+
+

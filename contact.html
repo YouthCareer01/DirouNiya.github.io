@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Dirou Niya</title>
+  <style>
+    /* CSS-styling hier */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: white;
+    }
+
+    header {
+      background-color: #000000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+    }
+
+    input[type="submit"] {
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555555;
+    }
+
+    footer {
+      background-color: #000000;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons img {
+      max-width: 30px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dirou Niya</h1>
+    <nav>
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trainingen.html">Trainingen</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="cursussen.html">Cursussen</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Neem contact met ons op voor vragen, opmerkingen of om u in te schrijven voor een van onze activiteiten.</p>
+    <form action="contact.php" method="POST">
+      <label for="name">Naam:</label>
+      <input type="text" id="name" name="name" placeholder="Uw naam" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Uw e-mailadres" required>
+
+      <label for="phone">Telefoonnummer:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
+
+      <label for="message">Bericht:</label>
+      <textarea id="message" name="message" placeholder="Uw bericht" required></textarea>
+
+      <input type="submit" value="Versturen">
+    </form>
+  </section>

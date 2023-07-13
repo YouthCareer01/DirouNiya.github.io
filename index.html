@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <title>Dirou Niya</title>
   <style>
     /* CSS-styling hier */
+    :root {
+      --bs-primary: #AB8657;
+      --bs-secondary: #6c757d;
+      --bs-success: #198754;
+      --bs-info: #0dcaf0;
+      --bs-warning: #ffc107;
+      --bs-danger: #dc3545;
+      --bs-light: #f8f9fa;
+      --bs-dark: #212529;
+      --bs-body-color: #212529;
+      --bs-body-bg: #fff;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: Crimson Pro, serif;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: var(--bs-body-color);
+      background-color: var(--bs-body-bg);
       margin: 0;
       padding: 0;
-      background-image: url(pexels-james-wheeler-417074.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      color: white; /* Alle tekst wit maken */
+      overflow-x: hidden;
     }
 
     header {
-      background-color: #000000;
+      background-color: var(--bs-dark);
       padding: 20px;
       text-align: center;
       width: 100%;
+      color: var(--bs-light);
     }
 
     h1 {
-      color: #ffffff;
+      color: var(--bs-light);
       margin: 0;
     }
 
@@ -41,7 +55,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #cccccc;
+      color: var(--bs-secondary);
       padding: 5px;
     }
 
@@ -55,7 +69,7 @@
       display: block;
       width: 25px;
       height: 3px;
-      background-color: #ffffff;
+      background-color: var(--bs-light);
       margin-bottom: 5px;
     }
 
@@ -69,15 +83,15 @@
       }
 
       .menu-icon:hover span {
-        background-color: #ffffff;
+        background-color: var(--bs-light);
       }
 
       nav ul.show {
         display: flex;
         flex-direction: column;
-        position: relative; /* Veranderd naar relative */
-        margin-top: 20px; /* Toegevoegde marge */
-        background-color: #333;
+        position: relative;
+        margin-top: 20px;
+        background-color: var(--bs-dark);
         width: 150px;
         z-index: 1;
       }
@@ -93,7 +107,7 @@
     }
 
     h2 {
-      color: white;
+      color: var(--bs-light);
     }
 
     img {
@@ -117,11 +131,11 @@
     }
 
     footer {
-      background-color: #000000;
+      background-color: var(--bs-dark);
       padding: 20px;
       text-align: center;
       width: 100%;
-      color: #ffffff;
+      color: var(--bs-light);
     }
 
     .social-icons {
@@ -138,48 +152,6 @@
     .social-icons img {
       max-width: 30px;
       height: auto;
-    }
-
-    /* Aanpassingen voor het contactformulier */
-    form label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form input[type="tel"],
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #cccccc;
-      text-align: center; /* Center align the text */
-    }
-
-    form input[type="submit"] {
-      background-color: #333333;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-
-    form input[type="submit"]:hover {
-      background-color: #555555;
-    }
-
-    /* Responsieve aanpassingen voor kleinere schermen */
-    @media screen and (max-width: 768px) {
-      body {
-        font-size: 16px; /* Voorbeeld van aanpassing: verklein de lettergrootte */
-      }
-
-      img {
-        max-width: 100%; /* Voorbeeld van aanpassing: maak afbeeldingen responsief */
-      }
-
-      /* Voeg hier andere responsieve CSS-regels toe om de website aan te passen voor kleinere schermen */
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -1,44 +1,29 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 <head>
   <title>Dirou Niya</title>
   <style>
     /* CSS-styling hier */
-    :root {
-      --bs-primary: #AB8657;
-      --bs-secondary: #6c757d;
-      --bs-success: #198754;
-      --bs-info: #0dcaf0;
-      --bs-warning: #ffc107;
-      --bs-danger: #dc3545;
-      --bs-light: #f8f9fa;
-      --bs-dark: #212529;
-      --bs-body-color: #212529;
-      --bs-body-bg: #fff;
-    }
-
-    body {
-      font-family: Crimson Pro, serif;
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: var(--bs-body-color);
-      background-color: var(--bs-body-bg);
+body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      background-image: url(pexels-james-wheeler-417074.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white; /* Alle tekst wit maken */
     }
 
     header {
-      background-color: var(--bs-dark);
+      background-color: #000000;
       padding: 20px;
       text-align: center;
       width: 100%;
-      color: var(--bs-light);
     }
 
     h1 {
-      color: var(--bs-light);
-      margin: 0;
+      color: #ffffff;
     }
 
     nav ul {
@@ -55,7 +40,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: var(--bs-secondary);
+      color: #cccccc;
       padding: 5px;
     }
 
@@ -69,7 +54,7 @@
       display: block;
       width: 25px;
       height: 3px;
-      background-color: var(--bs-light);
+      background-color: #ffffff;
       margin-bottom: 5px;
     }
 
@@ -83,15 +68,15 @@
       }
 
       .menu-icon:hover span {
-        background-color: var(--bs-light);
+        background-color: #ffffff;
       }
 
       nav ul.show {
         display: flex;
         flex-direction: column;
-        position: relative;
-        margin-top: 20px;
-        background-color: var(--bs-dark);
+        position: relative; /* Veranderd naar relative */
+        margin-top: 20px; /* Toegevoegde marge */
+        background-color: #333;
         width: 150px;
         z-index: 1;
       }
@@ -107,7 +92,7 @@
     }
 
     h2 {
-      color: var(--bs-light);
+      color: white;
     }
 
     img {
@@ -131,11 +116,11 @@
     }
 
     footer {
-      background-color: var(--bs-dark);
+      background-color: #000000;
       padding: 20px;
       text-align: center;
       width: 100%;
-      color: var(--bs-light);
+      color: #ffffff;
     }
 
     .social-icons {
@@ -153,18 +138,60 @@
       max-width: 30px;
       height: auto;
     }
+
+    /* Aanpassingen voor het contactformulier */
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+      text-align: center; /* Center align the text */
+    }
+
+    form input[type="submit"] {
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #555555;
+    }
+
+    /* Responsieve aanpassingen voor kleinere schermen */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px; /* Voorbeeld van aanpassing: verklein de lettergrootte */
+      }
+
+      img {
+        max-width: 100%; /* Voorbeeld van aanpassing: maak afbeeldingen responsief */
+      }
+
+      /* Voeg hier andere responsieve CSS-regels toe om de website aan te passen voor kleinere schermen */
+    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
+    <h1>Dirou Niya</h1>
     <nav>
       <div class="menu-icon">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <h1>Dirou Niya</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="trainingen.html">Trainingen</a></li>
@@ -182,15 +209,6 @@
     <img src="g5nepuve.png" alt="Welkom" class="fade-in">
   </section>
   
-  <footer>
-    <div class="social-icons">
-      <a href="#"><img src="facebook-g158d30255_1280.png" alt="Facebook"></a>
-      <a href="#"><img src="twitter-logo.png" alt="Twitter"></a>
-      <a href="#"><img src="instagraammmm.jpg" alt="Instagram"></a>
-    </div>
-    <p>Dirou Niya &copy; 2023</p>
-  </footer>
-
   <script>
     // JavaScript code hier (indien nodig)
     const menuIcon = document.querySelector(".menu-icon");
@@ -200,5 +218,14 @@
       nav.classList.toggle("show");
     });
   </script>
+  
+  <footer>
+    <div class="social-icons">
+      <a href="#"><img src="facebook-g158d30255_1280.png" alt="Facebook"></a>
+      <a href="#"><img src="twitter-logo.png" alt="Twitter"></a>
+      <a href="#"><img src="instagraammmm.jpg" alt="Instagram"></a>
+    </div>
+    <p>Dirou Niya &copy; 2023</p>
+  </footer>
 </body>
 </html>
